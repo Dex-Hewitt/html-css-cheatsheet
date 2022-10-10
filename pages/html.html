@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>HTML CheatSheet</title>
+</head>
+<body>
+    <div class="return-button"><a href="../index.html">Back to Home</a></div>
+    <header>
+        <h1>HTML CheatSheet</h1>
+    </header>
+    <main>
+        <nav>
+            <ul>
+                <li><h3>Elements</h3></li>
+                <li><a href="#overall-layout">Overall Layout</a></li>
+                <li><a href="#metadata">Metadata</a></li>
+                <li><a href="#semantic">Semantic</a></li>
+                <li><a href="#common">Common</a></li>
+                <li><a href="#typography">Typography</a></li>
+                <li><a href="#form">Forms</a></li>
+                <li><a href="#tables">Tables</a></li>
+                <li><h3>Attributes</h3></li>
+            </ul>
+        </nav>
+        <section>
+            <h2>Elements</h2>
+            <table id="overall-layout">
+                <caption>Overall Layout</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Tag</th>
+                        <th scope="col">Use-Case</th>
+                        <th scope="col">unique Attributes</th>
+                    </tr>                
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">&lt;!DOCTYPE html&gt;</th>
+                        <td>All HTML files must start with this declaration to let the browser know which version of HTML is being used
+                            (html sets it to the current standard of HTML5)
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;html&gt;</th>
+                        <td>All HTML in your file must sit between these tags</td>
+                        <td>lang: tells the browser the default language</td>
+                    </tr>  
+                    <tr>
+                        <th scope="row">&lt;head&gt;</th>
+                        <td>Contains all Metadata and information not displayed visually<br>
+                            e.g, stylesheets, links, scripts, etc.
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;body&gt;</th>
+                        <td>Contains all other HTML elements that are displayed on the web-page</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table id="metadata">
+                <caption>MetaData Elements</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Tag</th>
+                        <th scope="col">Use-Case</th>
+                        <th scope="col">Unique Attributes</th>
+                    </tr>                
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">&lt;title&gt;</th>
+                        <td>Changes the title of the page (the label of the tab in the browser, different from h1)</td>
+                        <td></td>
+                    </tr>  
+                    <tr>
+                        <th scope="row">&lt;base&gt;</th>
+                        <td>Declares a default url / target for all links within the document</td>
+                        <td><strong>href</strong>: takes desired url as input <br>
+                            <strong>target</strong>: Specifies how it should open the url. (e.g _blank)
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;link&gt;</th>
+                        <td>Links your HTML document to external sources, such as stylesheets</td>
+                        <td><strong>crossorigin, href, hreflang, media, referrerpolicy, rel, sizes, title, type</strong><br>See attributes section for more details</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;style&gt;</th>
+                        <td>Used as a way of styling your HTML using CSS, an alternative to linking to a CSS file, not commonly used</td>
+                        <td><strong>media, type</strong></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;script&gt;</th>
+                        <td>Links your HTML document to a separate (most commonly JS) document to add functionality to your website</td>
+                        <td><strong>src, defer, async, crossorigin, integrity, nomodule, type, referrerpolicy</strong></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;meta&gt;</th>
+                        <td>All other metadata is used through the meta tag. This includes charactersets, specifying device widths, etc.</td>
+                        <td><strong>charset, content, name, http-equiv</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table id="semantic">
+                <caption>Semantic Elements <span class="subtitle">(semantic elements are used to make HTML for accessible and readable for people using screen-readers, having clean, readable
+                    code for yourself and collaborators, and for improving SEO (search-engine-optimisation))</span></caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Tag</th>
+                        <th scope="col">Use-Case</th>
+                        <th scope="col">Unique Attributes</th>
+                    </tr>                
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">&lt;main&gt;</th>
+                        <td>Specifies the <strong>main content</strong> of your page</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;header&gt;</th>
+                        <td>Contains content that would usually sit at the <strong>top of the page</strong>, such as logos, a title, and often the &lt;nav&gt; tag</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;footer&gt;</th>
+                        <td>Contains content that usually sits at the <strong>bottom of websites</strong> such as relevant links, copyright information, 
+                            terms of service, etc.
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;nav&gt;</th>
+                        <td>Usually contains links to help <strong>navigate</strong> the website</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;article&gt;</th>
+                        <td>Specifies content that is independent and makes sense <strong>on its own</strong>. This can include a blog post, a thread, literal articles, and much more
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;section&gt;</th>
+                        <td>This one is quite self-explanatory. It helps divide your content up into <strong>logical sections</strong>, up to you to decide how and where to insert them</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;aside&gt;</th>
+                        <td>This tag is used to specify content that may not be directly relevant or necessary to the main content of the page. 
+                            It can be styled to be literally, <strong>aside</strong>, the content, or perhaps as a <i>'fun fact'</i>, between your main content.
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;details&gt;</th>
+                        <td>Is used to provide extra, <strong>optional details</strong> that a user may choose to show or hide.</td>
+                        <td><strong>open</strong>: changes the default behaviour from closed (not visible) to open</td>
+                    </tr>  
+                    <tr>
+                        <th scope="row">&lt;figure&gt;</th>
+                        <td>This element is used to define <strong>self-contained content</strong>. This can be a video, image, code examples, etc. 
+                            Usually used with a <strong>&lt;figcaption&gt</strong>;
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;figcaption&gt;</th>
+                        <td>This provides a <strong>caption</strong> that is relevant to the <strong>&lt;figure&gt;</strong> used above</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;mark&gt;</th>
+                        <td>Is used to specify text that needs attention brought to it, like <strong>highlighting</strong></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;summary&gt;</th>
+                        <td>Summary is often used to <strong>summarise</strong> its relevant section, article, or main content</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;time&gt;</th>
+                        <td>Defines a time/date</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table id="common">
+                <caption>Common Elements</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Tag</th>
+                        <th scope="col">Use-Case</th>
+                        <th scope="col">Unique Attributes</th>
+                    </tr>                
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">&lt;Div&gt;</th>
+                        <td>A Blank Divisional Element</td>
+                        <td></td>
+                    </tr>  
+                    <tr>
+                        <th scope="row">&lt;h1&gt; --> &lt;h6&gt;</th>
+                        <td>Heading elements with <strong>h1</strong> being the highest importance and <strong>h6</strong> being the least</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;p&gt;</th>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;span&gt;</th>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;img&gt;</th>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;video&gt;</th>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;br&gt;</th>
+                        <td>Used as an invisible line break for text displayed on website. Generally not best practice</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table id="typography">
+                <caption>Typography Elements</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Tag</th>
+                        <th scope="col">Use-Case</td>
+                        <th scope="col">Unique Attributes</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;strong&gt;</th>
+                        <td>Used to wrap <strong>important text</strong></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;b&gt;</th>
+                        <td>Used to make text <b>bold</b></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;i&gt;</th>
+                        <td>Used to make text <i>italic</i></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;em&gt;</th>
+                        <td>Used for <em>emphasis</em></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;mark&gt;</th>
+                        <td>Used for <mark>marked text</mark>, much like highlighting</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;small&gt;</th>
+                        <td>Used to make text <small>small</small></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;del&gt;</th>
+                        <td>Used to <del>strikethrough text</del>, as if deleted</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;ins&gt;</th>
+                        <td>Used for <ins>inserted text</ins>, underlined</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;sub&gt;</th>
+                        <td>Used for <sub>subscript</sub></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;sup&gt;</th>
+                        <td>Used for <sup>superscript</sup></td>
+                        <td></td>
+                    </tr>
+                </thead>
+            </table>
+            <table id="form">
+                <caption>Form Elements</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Tag</th>
+                        <th scope="col">Use-Case</td>
+                        <th scope="col">Unique Attributes</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">&lt;form&gt;</th>
+                        <td>Used to create a form in which all other form elements should be nested</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;input&gt;</th>
+                        <td>Used to gather many forms of user input depending on the attributes used</td>
+                        <td><strong>type, value, name, width, height, placeholder, checked, etc.</strong></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;label&gt;</th>
+                        <td>Used to label different form elements, by using "for" and "form" as arguments</td>
+                        <td><strong>for:</strong> Specifies which element it is labelling <br>
+                            <strong>form:</strong> specifies which form it sits within</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;select&gt;</th>
+                        <td>Creates a dropdown element in which users can <strong>select</strong> one of the options</td>
+                        <td><strong>autofocus, disabled, form, multiple, name, required, size</strong></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;option&gt;</th>
+                        <td>Used to create an option within the select, datalist, or optgroup element</td>
+                        <td><strong>disabled, label, selected, value</strong></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;optgroup&gt;</th>
+                        <td>Used to group similar options within select elements</td>
+                        <td><strong>disabled, label</strong></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;textarea&gt;</th>
+                        <td>Creates an area where users can type. Often used for times when more text is required, instead of &lt;input type="text"&gt;</td>
+                        <td><strong>autofocus, cols, dirname, disabled, form, maxlength, name, placeholder, readonly, required, rows, wrap</strong></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;button&gt;</th>
+                        <td>Creates a clickable button element that performs an action. Often used with javascript for more functionality.</td>
+                        <td><strong>autofocus, disabled, form, formaction, formenctype, formmethod, formnovalidate, formtarget, name, type, value</strong></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;fieldset&gt;</th>
+                        <td>Used as a way of grouping related sections of forms</td>
+                        <td><strong>disabled, form, name</strong></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;legend&gt;</th>
+                        <td>Creates a caption for the fieldset element</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;datalist&gt;</th>
+                        <td>Datalist is similar to select in that there is a dropdown in which a user can choose an option. However datalist also allows the user to create an option</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;output&gt;</th>
+                        <td>Used to show the result of a calculation, like one done in JS</td>
+                        <td><strong>for, form, name</strong></td>
+                    </tr>                    
+                </tbody>
+            </table>
+            <table id="tables">
+                <caption>Table Elements</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Tag</th>
+                        <th scope="col">Use-Case</th>
+                        <th scope="col">Unique Attributes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">&lt;table&gt;</th>
+                        <td>Creates a table element in which all other parts are nested</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;thead&gt;</th>
+                        <td>Defines the head section of a table, including the headings of different columns</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;tbody&gt;</th>
+                        <td>Defines the body section of a table where the bulk of the data sits</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;tfoot&gt;</th>
+                        <td>Defines the footer section of a table, perhaps the totals sits here</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;caption&gt;</th>
+                        <td>Creates a caption for the parent table</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;tr&gt;</th>
+                        <td>Defines a row in the table, which &lt;th&gt; and &lt;td&gt; are nested</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;th&gt;</th>
+                        <td>Creates a header cell within a row, often used furthest left</td>
+                        <td><strong>arr, colspan, headers, rowspan, scope</strong></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">&lt;td&gt;</th>
+                        <td>Creates a data cell within a row, usually used after the &lt;th&gt; elements</td>
+                        <td><strong>colspan, headers, rowspan</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>       
+    </main>
+</body>
+</html>

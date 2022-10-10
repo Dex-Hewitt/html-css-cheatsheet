@@ -1,0 +1,130 @@
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background: linear-gradient(to right bottom, lightblue, purple);
+    min-height: 100vh;
+}
+
+h1, h2 {
+    margin: 3rem 0 5rem 0;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.subtitle {
+    font-size: 16px;
+    font-style: italic;
+}
+
+.page-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.page-options li {
+    list-style: none;
+    display: inline-block;
+    width: 20rem;
+    min-width: 200px;
+    text-align: center;
+    padding: 4rem 0;
+    border: 5px solid gray;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+}
+
+nav {
+    border: 1px solid black;
+    display: inline-block;
+    position: fixed;
+    left: 5rem;
+    top: 10rem
+}
+
+nav li {
+    list-style: none;
+    padding: 1rem
+}
+
+#html {
+    background-image: url(/styles/images/pexels-pixabay-270404.jpg);
+}
+
+#css {
+    background-image: url(/styles/images/pexels-pixabay-256502.jpg);
+}
+
+#js {
+    background-image: url(/styles/images/pexels-markus-spiske-2004161.jpg);
+    background-size: cover;
+}
+
+.page-link {
+    background-color: white;
+    display: inline-block;
+    padding: 2rem;
+    font-weight: bold;
+    letter-spacing: 1rem;
+    opacity: .7;
+    color: black;
+    font-size: 25px;
+    text-decoration: none;
+    border-radius: 1rem;
+}
+
+.page-link:hover {
+    opacity: 1;
+    transition-duration: 100ms;
+}
+
+.return-button {
+    display: inline-block;
+    position: fixed;
+    top: 5px;
+    left: 5px;
+}
+
+table{
+    width: 80%;
+    margin: 3rem;
+    margin-left: auto;
+    text-align: left;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border: 3px solid black;
+}
+
+thead th:nth-child(1) {
+    width: 15%;
+}
+
+thead th:nth-child(2) {
+    width: 45%;
+}
+
+thead th:nth-child(3) {
+    width: 40%;
+}
+
+th, td {
+    padding: 1rem;
+    vertical-align:top;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+caption {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    padding-left: .5rem;
+}
+
