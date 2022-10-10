@@ -55,15 +55,15 @@ nav li {
 }
 
 #html {
-    background-image: url(/styles/images/pexels-pixabay-270404.jpg);
+    background-image: url(/styles/images/html.jpg);
 }
 
 #css {
-    background-image: url(/styles/images/pexels-pixabay-256502.jpg);
+    background-image: url(/styles/images/css.jpg);
 }
 
 #js {
-    background-image: url(/styles/images/pexels-markus-spiske-2004161.jpg);
+    background-image: url(/styles/images/js.jpg);
     background-size: cover;
 }
 
